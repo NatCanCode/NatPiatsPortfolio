@@ -1,0 +1,731 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.flex{
+    display: flex;
+}
+body{
+    /* background-color: #FFFFF4; */
+    background-color:#121212;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
+    /* color: #0A0402; */
+    color: #FFFFF4 !important;
+    font-style: regular;
+    font-size: clamp(13px, 10vw, 20px);
+    line-height: 1.5;
+    /* convention du web : séparer paragraphes de 1.3 */
+}
+img{
+    /* garder ratio d'une image  */
+    border-radius: 3px;
+    object-fit: cover;
+    display: block;
+    max-width: 100%;
+}
+div{
+    height: auto;
+}
+button{
+    width: 50%;
+    border-radius: 5px;
+    border: 1px solid #999b84;
+    background-color: #999b84;
+    padding: 1% 3% 1% 3%;
+    /* padding: top right bottom left*/
+    transition: background-color .5s;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFF4;
+    font-size: clamp(13px, 10vw, 20px);
+    line-height: 30px;
+    font-weight: 700;
+    justify-content: center;
+    align-self: center;
+}
+button:hover {
+    color: #999b84 !important;
+    background-color: #FFFFF4;
+    border: 1px solid #999b84 !important;
+    cursor: pointer;
+}
+button a{
+    color: #FFFFF4;
+}
+button a:hover{
+    color: #999b84;
+}
+p{
+    font-size: clamp(13px, 10vw, 20px);
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+h1{
+    font-size: clamp(32px, 7vw, 60px);
+}
+h2{
+    font-size: clamp(28px, 7vw, 42px);
+}
+h3{
+    font-size: clamp(25px, 7vw, 36px);
+}
+h4{
+    font-size: clamp(20px, 7vw, 30px);
+}
+h5{
+    font-size: clamp(18px, 7vw, 25px);
+}
+h6{
+    font-size: clamp(14px, 7vw, 20px);
+}
+a{
+    font-size: clamp(13px, 7vw, 20px);
+    text-decoration: none;
+    color: #FFFFF4;
+    transition: color .5s;
+}
+li{
+    list-style: none;
+}
+
+/* HEADER */
+/* #myvideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  } */
+header{
+    width: 100vw;
+    height: 100vh;
+}
+nav{
+    max-width: 100vw;
+    min-height: 10vh;
+    justify-content: space-between;
+    /* background-color: #f4eeed; */
+    /* background-color: #efd9d1; */
+    background-color:#715166;
+}
+.nat{
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 5%;
+    text-transform: uppercase;
+}
+.nat h6 a{
+    font-size: clamp(13px, 7vw, 20px);
+    font-weight: bold;
+    /* color: black; */
+}
+.nav-links{
+    min-height: 100%;
+    min-width: 50%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    flex-wrap: wrap;
+}
+header a{
+    text-decoration: none;
+    color: #0A0402;
+    /* color: #FFFFF4; */
+    transition: color .5s;
+}
+a:hover{
+    color: #999b84;
+}
+nav a:hover{
+    /* color: #FFFFF4; */
+    color: #999b84;
+}
+#landing{
+    text-transform: uppercase;
+    max-height: 90vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 12vh;
+    margin-bottom: 5vh;
+}
+.scroll{
+    text-transform: none;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60%;
+    padding-bottom: 2%;
+}
+
+/* MAIN */ 
+/* ABOUT */
+#about{
+    display: grid;
+    grid-gap: 5%;
+    max-width: 100vw;
+    background-color: #715166;
+    /* background-color: #f4eeed; */
+    padding: 5% 5% 12% 5%;
+    /* padding: top right bottom left*/
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: .15fr 1fr;
+    grid-template-areas: 
+    "abouttitle abouttitle"   
+    "cartoonpic about";
+}
+.abouttitle{
+    grid-area: abouttitle;
+    text-transform: uppercase;
+    align-items: center;
+}
+.aboutme{
+    grid-area: about;
+    flex-direction: column;
+    justify-content: center;
+}
+.cartoonpic{
+    grid-area: cartoonpic;
+}
+.aboutme li{
+    margin-bottom: 2%;
+}
+.aboutme button{
+    margin-top: 7%;
+}
+
+
+/* SKILLS */
+#softskills{
+    display: grid;
+    grid-gap: 5%;
+    min-height: 100vh;
+    max-width: 100vw;
+    /* background-color: #f4eeed; */
+    /* background-color: #FFFFF4; */
+    background-color:#121212;
+    padding: 5% 5% 12% 5%;
+    /* padding: top right bottom left*/
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: .3fr .5fr .1fr .4fr;
+    grid-template-areas:
+    "skillstitle skillstitle skillstitle skillstitle" 
+    "icon1 icon2 icon3 icon4"   
+    "skill1 skill2 skill3 skill4"
+    ". skillsbutton skillsbutton .";
+}
+.skillstitle{
+    grid-area: skillstitle;
+    text-transform: uppercase;
+    align-items: center;
+    /* border: 3px solid red; */
+}
+.icon1{
+    grid-area: icon1;
+    /* background-color: #d8ac9c; */
+    /* background-color: #efd9d1; */
+    background-color: #715166;
+    border-radius: 50%;
+}
+.icon2{
+    grid-area: icon2;
+    /* background-color: #d8ac9c; */
+    /* background-color: #efd9d1; */
+    background-color: #715166;
+    border-radius: 50%;
+}
+.icon3{
+    grid-area: icon3;
+    /* background-color: #d8ac9c; */
+    /* background-color: #efd9d1; */
+    background-color: #715166;
+    border-radius: 50%;
+}
+.icon4{
+    grid-area: icon4;
+    /* background-color: #d8ac9c; */
+    /* background-color: #efd9d1; */
+    background-color: #715166;
+    border-radius: 50%;
+}
+.skill1{
+    grid-area: skill1;
+    /* border: 3px solid red; */
+    justify-content: center;
+    text-align: center;
+}
+.skill2{
+    grid-area: skill2;
+    /* border: 3px solid red; */
+    justify-content: center;
+    text-align: center;
+}
+.skill3{
+    grid-area: skill3;
+    /* border: 3px solid red; */
+    justify-content: center;
+    text-align: center;
+}
+.skill4{
+    grid-area: skill4;
+    /* border: 3px solid red; */
+    justify-content: center;
+    text-align: center;
+}
+.skillsbutton{
+    grid-area: skillsbutton;
+    justify-content: center;
+    justify-self: center;
+    width: 70%;
+}
+
+/* PROJECTS */
+#projects p{
+    margin-top: 3%;
+}
+#projects{
+    display: grid;
+    grid-gap: 5%;
+    min-width: 100vw;
+    padding: 5% 5% 12% 5%;
+    /* padding: top right bottom left*/
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: .15fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "projectstitle projectstitle"   
+    "medtechpic medtechtext"
+    "flourshowertext flourshowerpic"
+    "eshoppic eshoptext";
+}
+.projectstitle{
+    grid-area: projectstitle;
+    text-transform: uppercase;
+    align-items: center;
+    /* border: 3px solid red; */
+}
+.medtechpic{
+    grid-area: medtechpic;
+    border-radius: 3px;
+    /* background-color: #999b84; */
+    min-height: 100%;
+    min-width: 50%;
+    border: 3px solid green;
+}
+.medtechtext{
+    grid-area: medtechtext;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid green;
+}
+.flourshowerpic{
+    grid-area: flourshowerpic;
+    border-radius: 3px;
+    /* background-color: #d8ac9c; */
+    min-height: 100%;
+    min-width: 50%;
+    border: 3px solid pink;
+}
+.flourshowertext{
+    grid-area: flourshowertext;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid pink;
+}
+.eshoppic{
+    grid-area: eshoppic;
+    border-radius: 3px;
+    /* background-color: #f4eeed; */
+    min-height: 100%;
+    min-width: 50%;
+    border: 3px solid purple;
+}
+.eshoptext{
+    grid-area: eshoptext;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid purple;
+}
+
+/* FOOTER */
+footer a{
+    text-decoration: none;
+    margin-top: 8%;
+    transition: color .5s;
+}
+footer a:hover {
+    color: #d8ac9c;
+}
+footer p{
+    font-size: clamp(11px, 10vw, 16px);
+}
+footer{
+    display: grid;
+    grid-gap: 1%;
+    min-width: 100vw;
+	min-height: 50vh;
+    background-color: #999b84;
+    color: #FFFFF4;
+    grid-row-gap: 15%;
+    padding: 5% 5% 5% 5%;
+    /* padding: top right bottom left*/
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: 1fr 1fr;
+    grid-template-areas:    
+    "footertitle footertitle footertitle . logo"
+    "socialmedia socialmedia . copyright copyright ";
+}
+.footertitle{
+    grid-area: footertitle;
+    flex-direction: column;
+    justify-content: center ;
+    /* border: 3px solid purple; */
+}
+.logo{
+	grid-area: logo;
+    align-self: center;
+    text-align: right;
+    /* border: 3px solid green; */
+}
+.socialmedia{
+    grid-area: socialmedia;
+    align-self: center;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5%;
+    align-items: center;
+    /* border: 3px solid orange; */
+}
+.copyright{
+    grid-area: copyright;
+    align-self: center;
+    text-align: right;
+    /* border: 3px solid red; */
+}
+
+/* 360×640 => Galaxy S5
+375×667 => iPhone X */
+/* MEDIA QUERIES */
+@media screen and (max-width: 375px){
+    #landing{
+        margin-top: 13vh;
+        margin-bottom: 7vh;
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+    .abouttitle{
+        margin-bottom: -10%;
+    }
+    .aboutme{
+        margin-top: -10%;
+    }
+    .aboutme button{
+        margin-top: 15%;
+        margin-bottom: 15%;
+    }
+    footer{
+        grid-row-gap: 3%;
+        padding: 5% 5% 10% 5%;
+        /* padding: top right bottom left*/
+    }
+}
+
+/* 414×896 => iPhone 6/7/8+ */
+@media screen and (max-width: 415px){
+	/*  HEADER */
+    #landing p{
+        line-height: 1.5;
+    }
+    .scroll{
+        padding-bottom: 15%;
+    }
+    .cartoonpic{
+        margin-top: -10%;
+    }
+    .aboutme button{
+        margin-bottom: 15%;
+    }
+    footer{
+        padding: 5%;
+        /* padding: top right bottom left*/
+    }
+    .logo{
+        margin: 30%;
+    }
+    .footertitle{
+        margin-top: 20%;
+        margin-bottom: 15%;
+    }
+    .socialmedia{
+        margin-top: 20%;
+        margin-bottom: 10%;
+    }
+    .copyright{
+        margin-top: 30%;
+        /* border: 3px solid red; */
+    }
+
+    /* MAIN */
+
+
+    /* #projects{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 1fr 3% 1fr 3% 1fr 3%;
+        grid-template-areas:    
+        "cookiepic"
+        "cookietext"
+        "preparationpic"
+        "preparationtext"
+        "chouxpic"
+        "chouxtext";
+    }
+    #projects h2{
+        margin-top: -7%;
+    }
+    #projects p{
+        padding-bottom: 20%;
+    }
+    #projects .chouxtext p{
+        padding-bottom: 30%;
+    } */
+
+    /* FOOTER */
+    /* footer{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr 10% 1% 1fr;
+        grid-template-areas:    
+        "logo logo . ."
+        "collections bakery button button"
+        ". . . ."
+        "line line line line"
+        "copyright copyright socialmedia socialmedia";
+    }*/
+} 
+
+/* 768x1024 => iPad  */
+@media screen and (max-width: 768px){
+	/* (min-width: 500px) and */
+    /*  HEADER */
+    header{
+        max-height: 100vh;
+    }
+    .line{
+        width: 30px;
+        height: 3px;
+        background-color: #0A0402;
+        margin: 5px;
+    }
+    nav{
+        position: relative;
+    }
+    .hamburger{
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        /* to prevent circle animation to hide the burger*/
+        z-index: 2;  
+    }
+    .hamburger div{
+        transition: all .3s ease;
+    }
+    .nav-links{
+        position: fixed;
+        justify-content: space-evenly;
+        /* background-color: #f4eeed; */
+        /* background-color: #efd9d1; */
+        background-color: #715166;
+        height: 100vh;
+        width: 100vw;
+        flex-direction: column;
+        /* display: none; ---> to check if burger is visible*/ 
+        /* let's create the circle burger with a mask */
+        clip-path: circle(100px at 90% -20%);
+        -webkit-clip-path: circle(100px at 90% -20%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open{
+        clip-path: circle(100px at 90% -20%);
+        -webkit-clip-path: circle(1000px at 90% -20%);
+        pointer-events: all;
+    }
+    .nav-links li{
+        /* hides the li */
+        opacity: 0;
+    }
+    .nav-links li a{
+        font-size: 21px;
+    } 
+    .nav-links li:nth-child(1){
+       transition: all .5s ease .2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all .5s ease .4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all .5s ease .6s;
+    }
+    .nav-links li:nth-child(4){
+        transition: all .5s ease .8s;
+    }
+    li.fade{
+        opacity: 1;
+    }
+
+    /* ABOUT */
+    #about{
+        grid-gap: 3%;
+        padding: 15% 5% 25% 5%;
+        /* padding: top right bottom left*/
+	    grid-template-columns: 1fr;
+	    grid-template-rows: .1fr .5fr 1fr;
+        grid-template-areas: 
+        "abouttitle"   
+        "cartoonpic"
+        "about";
+    } 
+    .abouttitle{
+        justify-content: center;
+        align-items: center;
+    }
+    .cartoonpic{
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10%;
+    }
+    .aboutme li{
+        margin-bottom: 3.5%;
+    }
+    .aboutme button{
+        margin-top: 5%;
+        width: 70%
+    }
+
+    /* nav .logo{
+        margin-left: 5%;
+    }
+    #title{
+        text-align: center;
+        padding: 0 12% 0 12%;
+        /* padding: top right bottom left*/
+    /* }
+    h1{
+        margin-bottom: 5%;
+        line-height: 1;
+    }
+    #title p{
+        line-height: 1.5;
+    } */
+    
+    /* SOFT SKILLS */
+    #softskills{
+        /* padding: 5% 5% 12% 5%; */
+        /* padding: top right bottom left*/
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .3fr .8fr .2fr .8fr .2fr .4fr;
+        grid-template-areas:
+        "skillstitle skillstitle" 
+        "icon1 icon2"   
+        "skill1 skill2"
+        "icon3 icon4"
+        "skill3 skill4"
+        "skillsbutton skillsbutton";
+    }
+    .skillstitle{
+        justify-content: center;
+        align-items: center;
+    }
+    .skillsbutton{
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        width: 70%;
+        margin-bottom: 50%;
+    }
+
+    /* PROJECTS */
+    #projects{
+        padding: 5% 5% 12% 5%;
+        /* padding: top right bottom left*/
+        grid-template-columns: 1fr;
+        grid-template-rows: 15% 1fr 3% 1fr 3% 1fr 3%;
+        grid-template-areas:
+        "projectstitle"   
+        "medtechpic"
+        "medtechtext"
+        "flourshowertext" 
+        "flourshowerpic"
+        "eshoppic"
+        "eshoptext";
+    }
+    .projectstitle{
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* #projects p{
+        padding-bottom: 10%;
+    }
+    #projects .eshoptext p{
+        padding-bottom: 20%;
+    } */
+
+    /* FOOTER */    
+    footer{
+        height: 100vh;
+        padding: 5% 5% 45% 5%;
+        /* padding: top right bottom left*/
+        grid-row-gap: .1%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        ". logo ."
+        "footertitle footertitle footertitle"
+        "socialmedia socialmedia socialmedia"
+        "copyright copyright copyright ";
+    }
+    .footertitle{
+        text-align: center;
+    }
+    .logo{
+        margin: 40%;
+    }
+    .socialmedia{
+        justify-content: center;
+        align-items: center;
+    }
+    .copyright{
+        text-align: center;
+    }
+}
+
+/* burger animated cross */
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Breakpoints - most common screen size devices used in 2021:
+1920×1080
+1366×768 
+360×640 => Galaxy S5
+414×896 => iPhone 6/7/8+
+1536×864
+375×667 => iPhone X
+768x1024 => iPad */
