@@ -602,6 +602,13 @@ footer{
     #softskills{
         margin-bottom: 7%;
     }
+    .icon1
+    .icon2
+    .icon3
+    .icon4{
+    height: 50%;
+    width: 50%;
+    }	
     #projects{
         height: 1340vh !important;
     }
