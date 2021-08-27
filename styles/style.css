@@ -119,10 +119,14 @@ nav{
     margin-left: 5%;
     text-transform: uppercase;
 }
-.nat h6 a{
-    font-size: clamp(13px, 7vw, 20px);
-    font-weight: bold;
-    color: black;
+.rotation {
+    overflow: hidden;
+    transition-duration: 0.8s;
+    transition-property: transform;
+}
+.rotation:hover {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
 }
 .nav-links{
     min-height: 100%;
