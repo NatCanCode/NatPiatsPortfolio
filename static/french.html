@@ -11,17 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,200;0,300;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="shorcut icon" type="image" href="../images/pinwheelD8AC9C.svg">
 
-    <title>Nat Piat's portfolio</title>
+    <title>Le portfolio de Nath</title>
 </head>
 <body>
 
     <!-- HEADER -->
     <header id="header">
-        <!-- The video -->
-        <!-- <video autoplay muted loop id="myvideo">
-            <source src="video/Flowers - 66824.mp4" type="video/mp4">
-        </video> -->
-        <!-- NAV -->
         <nav class="flex">
             <div class="hamburger">
                 <div class="line line1 toggle"></div>
@@ -29,8 +24,14 @@
                 <div class="line line3 toggle"></div>
             </div>
             <div class="nat flex">
-                <a href="#about"><img src="../images/pinwheel0A0402.svg" alt="white-pinwheel-vector-origami-logo"></a>
-            </div> 
+                <a href="#about"><img class="rotation" src="../images/pinwheel0A0402.svg" alt="white-pinwheel-vector-origami-logo"></a>
+                <div class="dark-light-switch">
+                    <input type="checkbox" id="toggle" class="checkbox">
+                    <label class="flick flex" for="toggle">
+                        <div class="ball"></div>
+                    </label>
+                </div>
+            </div>
             <ul class="nav-links flex">
                 <a href="#about"><li>A propos</li></a>
                 <a href="#projects"><li>Projets</li></a>
@@ -59,9 +60,13 @@
         <!-- ABOUT -->
         <section id="about">
             <h3 id="salutations" class="abouttitle flex">Hey, je suis Nathalie !</h3>
-            <div class="cartoonpic flex" >
-                <img src="../images/pinklips.jpg" alt="cartoon-pic-of-nat-with-blond-hair-and-pink-lips">
-            </div>
+            <ul id="carousel" class="cartoonpic flex" >
+                <li class="slider" style="opacity:1;"><img src="../images/pinklips.jpg" alt="cartoon-pic-of-nat-with-blond-hair-and-pink-lips"></li>
+                <li class="slider"><img src="../images/redlips.jpg" alt="cartoon-pic-of-nat-with-blond-hair-and-red-lips">
+                </li>
+                <li class="slider"><img src="../images/redgreyhair.jpg" alt="cartoon-pic-of-nat-with-grey-and-red-hair-and-pink-lips">
+                </li>
+            </ul>
             <article class="aboutme flex">
                 <ul>
                     <li class="flex">Je suis développeuse web et j'habite à Paris. J'ai de l'expérience dans la communication internationale, et apprendre de nouvelles choses chaque jour est mon moteur.</li>
@@ -90,7 +95,7 @@
         </section>
 
         <!-- PROJECTS -->
-        <section id="projects">
+        <section id="projects" class="projects">
             <h3 class="projectstitle flex">Projets</h3>
             <img class="weatherpic flex" src="../images/worldweather.png" alt="">
             <!-- <video autoplay muted loop id="myvideo">
@@ -101,20 +106,17 @@
                 <p>Pour obtenir la météo en temps réel absolument partout dans le monde ! L'une de mes premières pages web véritablement interactives, codée en HTML, CSS, JavaScript, et en utilisant deux APIs.<br>Prêt à tester ? Voici le <a href="https://natcancode.github.io/worldweather/static/index.html">lien !</a></p>
             </article>
             <img class="medtechpic" src="../images/medtech-homepage.png" alt="">
-            <!-- <img class="medtechpic" src="../images/simplon-certification.png" alt=""> -->
             <article class="medtechtext flex">
                 <h5>Prix #Hackeuses Simplon</h5>
                 <p>Mon tout premier project de site web, en français et en anglais, présenté devant un jury de développeurs professionnels. Thème de la certification : "Femmes et numérique, je code donc je suis".<br>Prix du jury #Hackeuses reçu pour le design du site et l'originalité du sujet.</p>
             </article>
-            <!-- <img class="picsharepic" src="../images/picshare-responsive.png" alt=""> -->
-            <!-- <img class="picsharepic" src="../images/picshare-homepage.png" alt=""> -->
             <img class="picsharepic" src="../images/picshare-2-pages.png" alt="">
             <article class="picsharetext flex">
                 <h5>PicShare</h5>
                 <p>Projet de groupe réalisé à Matrice : création d'un site web pour partager des images en utilisant une base de données SQLite. Les utilisateurs peuvent uploader des visuels, que d'autres utilisateurs peuvent voir et commenter.</p>
             </article>
-            <!-- <img class="swipepic" src="../images/photoswipe.png" alt=""> -->
-            <iframe class="swipepic" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FP02EZ2EAEK2dZGPIht44au%2FPhotoSwipe-UX%3Fpage-id%3D0%253A1%26node-id%3D14%253A170%26viewport%3D241%252C48%252C0.22%26scaling%3Dscale-down%26starting-point-node-id%3D2%253A113" allowfullscreen></iframe>
+            <img class="swipepic" src="../images/photoswipe.png" alt="">
+            <!-- <iframe class="swipepic" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FP02EZ2EAEK2dZGPIht44au%2FPhotoSwipe-UX%3Fpage-id%3D0%253A1%26node-id%3D14%253A170%26viewport%3D241%252C48%252C0.22%26scaling%3Dscale-down%26starting-point-node-id%3D2%253A113" allowfullscreen></iframe> -->
             <article class="swipetext flex">
                 <h5>PhotoSwipe</h5>
                 <p>Travail d'équipe sur le Design Thinking, persona, UX/UI design dans le but de créer un prototype sur Figma. Blablabla.</p>
@@ -127,7 +129,7 @@
             <img class="imagegallerypic" src="../images/image-gallery-animation.png" alt="">
             <article class="imagegallerytext flex">
                 <h5>Animation d'une galerie d'images</h5>
-                <p>Projet personnel sur l'animation d'une galerie d'images en codant avec JavaScript. Les images sont cliquables, elles s'agrandissent lorsqu'on clique dessus, et une légende s'affiche. <br>Voici le  <a href="https://natcancode.github.io/image-gallery-animation/">lien</a> !</p>
+                <p>Projet personnel sur l'animation d'une galerie d'images en codant avec JavaScrip. Pop-up d'images fluide avec une légende en aperçu. Les images sont cliquables, elles s'agrandissent lorsqu'on clique dessus, et une légende s'affiche. <br>Voici le  <a href="https://natcancode.github.io/image-gallery-animation/">lien</a> !</p>
             </article>
             <img class="eshoppic" src="../images/eshop-3-pages.png" alt="">
             <article class="eshoptext flex">
@@ -140,7 +142,7 @@
                 <p>tout premier projet sur Figma dont le but était de re-penser le design d'un site web truffé de fautes de goût. <br>J'ai adoré découvrir ce nouvel outil !</p>
             </article>
 
-            <a href="#header"><p class="up flex">Up</p></a>
+            <a href="#projects"><p class="up flex">Up</p></a>
         </section>
 
         <!-- PHOTOGRAPHY GALLERY -->
@@ -155,7 +157,7 @@
             <h5>Créons de belles choses ensemble !</h5>
             <a href="mailto:nathalie.piat1@gmail.com"><h5 class="touch">Contactez-moi.</h5></a>
         </div>
-        <a href="#projects"><img class="logo" src="../images/pinwheelFFFFF4.svg" alt="white-pinwheel-vector-logo"></a>
+        <a href="#header"><img class="logo rotation" src="../images/pinwheelFFFFF4.svg" alt="white-pinwheel-vector-logo"></a>
         <p class="copyright flex">© Nathalie Piat, 2021. Made with love.</p>
         <div class="socialmedia flex">
             <a href="https://www.linkedin.com/in/nathaliepiat/"><img class="linkedin" src="../images/linkedinFFFFF4.svg" alt="linkedin-icon"></a>
@@ -169,7 +171,7 @@
     </footer>
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="../script/app.js"></script>
     <script src="../script/french.js"></script>
+    <script src="../script/app.js"></script>
 </body>
 </html>

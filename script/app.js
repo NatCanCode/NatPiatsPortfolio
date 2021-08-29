@@ -1,34 +1,55 @@
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-const links = document.querySelectorAll('.nav-links li');
-const header = document.querySelector("header");
+const hamburger = document.querySelector('.hamburger')
+const navLinks = document.querySelector('.nav-links')
+const links = document.querySelectorAll('.nav-links li')
+const header = document.querySelector("header")
 
 // toggle nav
 hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
+    navLinks.classList.toggle('open')
     links.forEach(link => {
-        link.classList.toggle('fade');
+        link.classList.toggle('fade')
     })
     // burger animated cross
-    hamburger.classList.toggle('toggle');
+    hamburger.classList.toggle('toggle')
     // after a link clicked allows user to click on burger cross to reach the section
-    header.classList.toggle("open");
+    header.classList.toggle("open")
+})
+
+// dark/light switch
+const darkMode = document.getElementById('toggle')
+darkMode.addEventListener('change' , () => {
+    document.body.classList.toggle('dark')
 })
 
 function greetings() {
     if (new Date().getHours() >= 2 && new Date().getHours() < 12) {
-        greets = "Hey, good morning!<br>I'm Nathalie.";
+        greets = "Hey, good morning!<br>I'm Nathalie."
     } else if (new Date().getHours() >= 12 && new Date().getHours() < 18) {
-        greets = "Hey, good afternoon!<br>I'm Nathalie.";
+        greets = "Hey, good afternoon!<br>I'm Nathalie."
     } else {
-        greets = "Hey, good evening!<br>I'm Nathalie.";
+        greets = "Hey, good evening!<br>I'm Nathalie."
     }
     // careful with security issues using innerHTML (user input only?)
-    document.getElementById("greetings").innerHTML = greets;
+    document.getElementById("greetings").innerHTML = greets
 }
-greetings();
+greetings()
 
+let carousel = document.getElementById("carousel")
+slides = carousel.getElementsByClassName("slider")
+counter = 0
 
+setInterval(function () {
+  slides[counter].style.opacity = 0; // Hide the previous image
+  counter = (counter + 1) % slides.length; // Increment counter
+  slides[counter].style.opacity = 1; // Show the next image
+}, 3000); // setInterval
+
+// let content = document.getElementsByTagName('body')[0]
+// let darkMode = document.getElementById('dark-light')
+// darkMode.addEventListener('click', () => {
+//     darkMode.classList.toggle('active')
+//     content.classList.toggle('night')
+// })
 
 // ----------------------------------------------------------------
 

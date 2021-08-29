@@ -1,8 +1,28 @@
+/* custom properties to define colours */
+:root {
+    --cream: #FFFFF4;
+    --black: #0A0402;
+    --oldpink: #efd9d1;
+    --kaki: #999b84;
+    --darkbackground: #261C2C;
+    --darknav: #7B637E;
+    --darkprojects: #3E2C41;
+    --switch-color: var(--black);
+    --ball-color: var(--cream);
+    --toggle-translate: 0;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/* .dark *{
+    background-color: var(--darkbackground);
+    color: var(--cream);
+    --switch-color: var(--cream);
+    --ball-color: var(--black);
+    --toggle-translate: 2.5rem;
+} */
 html{
     scroll-behavior: smooth;
 }
@@ -19,9 +39,16 @@ body{
     line-height: 1.5;
     /* convention du web : séparer paragraphes de 1.3 */
 }
+body.dark{
+    background-color: var(--darkbackground);
+    color: var(--cream);
+    --switch-color: var(--cream);
+    --ball-color: var(--black);
+    --toggle-translate: 2.5rem;
+}
 img{
     /* garder ratio d'une image  */
-    border-radius: 3px;
+    border-radius: 5px;
     object-fit: cover;
     display: block;
     max-width: 100%;
@@ -113,21 +140,56 @@ nav{
     /* background-color: #f4eeed; */
     background-color: #efd9d1;
 }
-.nat{
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: 5%;
-    text-transform: uppercase;
+nav.dark{
+    background-color: var(--darknav);
 }
-.rotation {
+.nat{
+    min-height: 100%;
+    min-width: 30%;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: auto;
+    /* margin-left: 5%; */
+    flex-wrap: wrap;
+}
+.rotation{
     overflow: hidden;
     transition-duration: 0.8s;
     transition-property: transform;
 }
-.rotation:hover {
+.rotation:hover{
     transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
 }
+
+/* dark mode switch */
+.checkbox{
+    display: none;
+}
+.flick{
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: var(--switch-color);
+    border-radius: 5rem;
+    padding: .5rem;
+    height: 2.5rem;
+    width: 5rem;
+    transition: .5rem ease;
+    cursor: pointer;
+}
+.flick .ball{
+    position: absolute;
+    background-color: var(--ball-color);
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    top: .25rem;
+    left: .25rem;
+    transform:translateX(var(--toggle-translate));
+    transition: transform .4s ease, .5 ease;
+}
+
 .nav-links{
     min-height: 100%;
     min-width: 50%;
@@ -166,6 +228,9 @@ nav a:hover{
     padding-top: 60%;
     padding-bottom: 2%;
 }
+.scroll.dark{
+    color: var(--cream);
+}
 
 /* MAIN */ 
 /* ABOUT */
@@ -183,6 +248,10 @@ nav a:hover{
     "abouttitle abouttitle"   
     "cartoonpic about";
 }
+#about.dark{
+    background-color: var(--darknav);
+    /* color: var(--cream); */
+}
 .abouttitle{
     grid-area: abouttitle;
     text-transform: uppercase;
@@ -193,9 +262,6 @@ nav a:hover{
     flex-direction: column;
     justify-content: center;
 }
-.cartoonpic{
-    grid-area: cartoonpic;
-}
 .aboutme li{
     margin-bottom: 2%;
 }
@@ -203,6 +269,22 @@ nav a:hover{
     margin-top: 7%;
 }
 
+/** || Carousel Styles */
+#carousel{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    min-width: 475px;
+    height: auto;
+  }
+#carousel li{
+    opacity: 0;
+    list-style: outside none none;
+    position: absolute;
+    background: transparent;
+    transition: opacity 1s;
+}
 
 /* SKILLS */
 #softskills{
@@ -221,6 +303,10 @@ nav a:hover{
     "icon1 icon2 icon3 icon4"   
     "skill1 skill2 skill3 skill4"
     ". skillsbutton skillsbutton .";
+}
+#softskills.dark{
+    background-color: var(--darknav);
+    /* color: var(--cream); */
 }
 .skillstitle{
     grid-area: skillstitle;
@@ -329,6 +415,10 @@ nav a:hover{
     "flourshowertext imagegallerytext"
     "eshoppic uidesignpic"
     "eshoptext uidesigntext";
+}
+.projects.dark{
+    background-color: var(--darkprojects);
+    /* color: var(--cream); */
 }
 .projectstitle{
     grid-area: projectstitle;
@@ -480,10 +570,13 @@ iframe{
     color: #0A0402;
     font-size: clamp(11px, 10vw, 16px);
     justify-content: flex-end;
-    padding-bottom: 10%;
+    /* padding-bottom: 10%; */
 }
 .up:hover{
     color: #999b84 !important;
+}
+.up.dark{
+    color: var(--cream);
 }
 
 /* FOOTER */
@@ -568,13 +661,16 @@ footer{
         padding-right: 7%;
     }
     .scroll{
-        margin-top: -5%;
+        margin-top: -20%;
     }
     .abouttitle{
-        margin-bottom: -10%;
+        margin-bottom: 1% !important;
     }
     .aboutme{
         margin-top: -10%;
+    }
+    #carousel, #carousel li{
+        min-width: 300px !important;
     }
     .aboutme button{
         margin-top: 15%;
@@ -594,11 +690,22 @@ footer{
     #landing p{
         line-height: 1.5;
     }
+    .nat{
+        margin-left: 5%;
+        min-width: 50%;
+    }
+    label{
+        margin-left: 50%;
+    }
     .scroll{
         padding-bottom: 15%;
     }
-    .cartoonpic{
-        margin-top: -10%;
+    .abouttitle{
+        margin-bottom: 2% !important;
+    }
+    #carousel, #carousel li{
+        width: 100%;
+        min-width: 375px;
     }
     .aboutme button{
         margin-bottom: 15%;
@@ -606,13 +713,6 @@ footer{
     #softskills{
         margin-bottom: 7%;
     }
-    .icon1
-    .icon2
-    .icon3
-    .icon4{
-    height: 50%;
-    width: 50%;
-    }	
     #projects{
         height: 1340vh !important;
     }
@@ -632,7 +732,14 @@ footer{
         margin-top: 30%;
         /* border: 3px solid red; */
     }
-} 
+}
+
+@media (min-width: 526px) {
+    #carousel, #carousel li{
+        width: 100%;
+        max-width: 500px;
+    }
+}
 
 /* 768x1024 => iPad  */
 @media screen and (max-width: 768px){
@@ -730,13 +837,20 @@ footer{
         text-align: center;
         margin-left: 6%;
         margin-right: 5%;
+        margin-bottom: 10%;
     }
     .cartoonpic{
         width: 80%;
         justify-content: center;
         align-items: center;
-        /* margin-left: 10%; */
         justify-self: center;
+    }
+    #carousel, #carousel li{
+        width: 80%;
+        max-width: 500px;
+    }
+    .aboutme ul{
+        margin-top: 10%;
     }
     .aboutme li{
         margin-bottom: 3.5%;

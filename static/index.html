@@ -5,24 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/style.css">
-    <!-- <link rel="stylesheet" href="../styles/dark-style.css"> -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,200;0,300;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="shorcut icon" type="image" href="../images/pinwheelD8AC9C.svg">
 
-    <title>Nat Piat's portfolio</title>
+    <title>Nat's portfolio</title>
 </head>
 <body>
 
     <!-- HEADER -->
     <header id="header">
-        <!-- The video -->
-        <!-- <video autoplay muted loop id="myvideo">
-            <source src="video/Flowers - 66824.mp4" type="video/mp4">
-        </video> -->
-        <!-- NAV -->
         <nav class="flex">
             <div class="hamburger">
                 <div class="line line1 toggle"></div>
@@ -30,8 +24,14 @@
                 <div class="line line3 toggle"></div>
             </div>
             <div class="nat flex">
-                <a href="#about"><img src="../images/pinwheel0A0402.svg" alt="white-pinwheel-vector-origami-logo"></a>
-            </div> 
+                <a href="#about"><img class="rotation" src="../images/pinwheel0A0402.svg" alt="white-pinwheel-vector-origami-logo"></a>
+                <div class="dark-light-switch">
+                    <input type="checkbox" id="toggle" class="checkbox">
+                    <label class="flick flex" for="toggle">
+                        <div class="ball"></div>
+                    </label>
+                </div>
+            </div>
             <ul class="nav-links flex">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -60,9 +60,13 @@
         <!-- ABOUT -->
         <section id="about">
             <h3 id="greetings" class="abouttitle flex">Hey,  I'm Nathalie!</h3>
-            <div class="cartoonpic flex" >
-                <img src="../images/pinklips.jpg" alt="cartoon-pic-of-nat-with-blond-hair-and-pink-lips">
-            </div>
+            <ul id="carousel" class="cartoonpic flex" >
+                <li class="slider" style="opacity:1;"><img src="../images/pinklips.jpg" alt="cartoon-pic-of-nat-with-blond-hair-and-pink-lips"></li>
+                <li class="slider"><img src="../images/redlips.jpg" alt="cartoon-pic-of-nat-with-blond-hair-and-red-lips">
+                </li>
+                <li class="slider"><img src="../images/redgreyhair.jpg" alt="cartoon-pic-of-nat-with-grey-and-red-hair-and-pink-lips">
+                </li>
+            </ul>
             <article class="aboutme flex">
                 <ul>
                     <li class="flex">I'm a junior Web Developer living in Paris, previously working in international communications, and always up for learning new things.</li>
@@ -91,7 +95,7 @@
         </section>
 
         <!-- PROJECTS -->
-        <section id="projects">
+        <section id="projects" class="projects">
             <h3 class="projectstitle flex">Selected projects</h3>
             <img class="weatherpic flex" src="../images/worldweather.png" alt="">
             <!-- <video autoplay muted loop id="myvideo">
@@ -102,20 +106,17 @@
                 <p>Getting the weather in real time absolutely everywhere in the  world! One of my first proper interactive web pages - coded in HTML, CSS, JavaScript, and using two APIs.<br>Want to try it? Here's the <a href="https://natcancode.github.io/worldweather/static/index.html">link</a>!</p>
             </article>
             <img class="medtechpic" src="../images/medtech-homepage.png" alt="">
-            <!-- <img class="medtechpic" src="../images/simplon-certification.png" alt=""> -->
             <article class="medtechtext flex">
                 <h5>Simplon #Hackeuses Certification Award</h5>
                 <p>My very first website project - English and French pages - presented to a jury of professional web developers. Certification subject: "Women and tech - I code therefore I am".<br>#Hackeuses jury prize awarded for the website design and subject originality.</p>
             </article>
-            <!-- <img class="picsharepic" src="../images/picshare-responsive.png" alt=""> -->
-            <!-- <img class="picsharepic" src="../images/picshare-homepage.png" alt=""> -->
             <img class="picsharepic" src="../images/picshare-2-pages.png" alt="">
             <article class="picsharetext flex">
                 <h5>PicShare</h5>
                 <p>Team project at Matrice building a website to share images using an SQLite database. Users being able to upload their own images and other users being able to view and comment the images. </p>
             </article>
-            <!-- <img class="swipepic" src="../images/photoswipe.png" alt=""> -->
-            <iframe class="swipepic" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FP02EZ2EAEK2dZGPIht44au%2FPhotoSwipe-UX%3Fpage-id%3D0%253A1%26node-id%3D14%253A170%26viewport%3D241%252C48%252C0.22%26scaling%3Dscale-down%26starting-point-node-id%3D2%253A113" allowfullscreen></iframe>
+            <img class="swipepic" src="../images/photoswipe.png" alt="">
+            <!-- <iframe class="swipepic" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FP02EZ2EAEK2dZGPIht44au%2FPhotoSwipe-UX%3Fpage-id%3D0%253A1%26node-id%3D14%253A170%26viewport%3D241%252C48%252C0.22%26scaling%3Dscale-down%26starting-point-node-id%3D2%253A113" allowfullscreen></iframe> -->
             <article class="swipetext flex">
                 <h5>PhotoSwipe</h5>
                 <p>Teamwork on Design Thinking, persona, UX/UI design, and prototyping with Figma.</p>
@@ -128,7 +129,7 @@
             <img class="imagegallerypic" src="../images/image-gallery-animation.png" alt="">
             <article class="imagegallerytext flex">
                 <h5>Image gallery animation</h5>
-                <p>Personal project on image gallery animation with JavaScript. The images are clickable - they expand when clicked and a caption is displayed. <br>Here is the <a href="https://natcancode.github.io/image-gallery-animation/">link</a>!</p>
+                <p>Personal project on image gallery animation with JavaScrip. Fluid image  pop-up with a preview caption. The images are clickable - they expand when clicked and a caption is displayed. <br>Here is the <a href="https://natcancode.github.io/image-gallery-animation/">link</a>!</p>
             </article>
             <img class="eshoppic" src="../images/eshop-3-pages.png" alt="">
             <article class="eshoptext flex">
@@ -141,7 +142,7 @@
                 <p>Very first project on Figma. The goal was to rethink the design of a website full of UI mistakes. <br>I had a blast discovering this new tool!</p>
             </article>
 
-            <a href="#header"><p class="up flex">Up</p></a>
+            <a href="#projects"><p class="up flex">Up</p></a>
         </section>
 
         <!-- PHOTOGRAPHY GALLERY -->
@@ -156,7 +157,7 @@
             <h4>Let's create something beautiful!</h4>
             <a href="mailto:nathalie.piat1@gmail.com"><h4 class="touch">Get in touch.</h4></a>    
         </div>
-        <a href="#projects"><img class="logo flex" src="../images/pinwheelFFFFF4.svg" alt="white-pinwheel-vector-logo"></a>
+        <a href="#header"><img class="logo rotation" src="../images/pinwheelFFFFF4.svg" alt="white-pinwheel-vector-logo"></a>
         <p class="copyright flex">© Nathalie Piat, 2021. Made with love.</p>
         <div class="socialmedia flex">
             <a href="https://www.linkedin.com/in/nathaliepiat/"><img class="linkedin" src="../images/linkedinFFFFF4.svg" alt="linkedin-icon"></a>

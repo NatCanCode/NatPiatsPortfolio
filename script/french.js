@@ -10,3 +10,6 @@ function salutations() {
     document.getElementById("salutations").innerHTML = salutations;
 }
 salutations();
+
+// console.log(++[[]][+[]]+[+[]]);
+// outputs 10
