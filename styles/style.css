@@ -152,6 +152,19 @@ nav.dark{
     /* margin-left: 5%; */
     flex-wrap: wrap;
 }
+@media (prefers-reduced-motion: no-preference){
+    .infinite-spin{
+        animation: rotate infinite .7s ease-in-out;
+    }
+}
+@keyframes rotate{
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
 .rotation{
     overflow: hidden;
     transition-duration: 0.8s;
