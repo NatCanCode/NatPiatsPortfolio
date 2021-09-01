@@ -95,6 +95,10 @@ h1, h2, h3, h4, h5, h6{
 }
 h1{
     font-size: clamp(32px, 7vw, 60px);
+    transition: transform 330ms ease-in-out;
+}
+h1:hover {
+    transform: translate(5vh);
 }
 h2{
     font-size: clamp(30px, 7vw, 42px);
@@ -152,6 +156,15 @@ nav.dark{
     /* margin-left: 5%; */
     flex-wrap: wrap;
 }
+.rotation{
+    overflow: hidden;
+    transition-duration: 0.8s;
+    transition-property: transform;
+}
+.rotation:hover{
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
 @media (prefers-reduced-motion: no-preference){
     .infinite-spin{
         animation: rotate infinite .7s ease-in-out;
@@ -164,15 +177,6 @@ nav.dark{
     100% {
       transform: rotate(360deg);
     }
-}
-.rotation{
-    overflow: hidden;
-    transition-duration: 0.8s;
-    transition-property: transform;
-}
-.rotation:hover{
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
 }
 
 /* dark mode switch */
@@ -445,7 +449,10 @@ nav a:hover{
     align-items: center;
     justify-self: center;
     height: 90vh;
-    /* border: 3px solid pink; */
+    transition: transform 330ms ease-in-out;
+}
+.weatherpic:hover{
+    transform: scale(1.1);
 }
 .weathertext{
     grid-area: weathertext;
@@ -461,7 +468,10 @@ nav a:hover{
     /* background-color: #999b84; */
     justify-self: center;
     height: 90vh;
-    /* border: 3px solid green; */
+    transition: transform 330ms ease-in-out;
+}
+.medtechpic:hover{
+    transform: scale(1.1);
 }
 .medtechtext{
     grid-area: medtechtext;
@@ -477,7 +487,10 @@ nav a:hover{
     /* background-color: #999b84; */
     justify-self: center;
     height: 90vh;
-    /* border: 3px solid green; */
+    transition: transform 330ms ease-in-out;
+}
+.picsharepic:hover{
+    transform: scale(1.1);
 }
 .picsharetext{
     grid-area: picsharetext;
@@ -487,16 +500,19 @@ nav a:hover{
     /* padding: top right bottom left*/
     /* border: 3px solid green; */
 }
-iframe{
+/* iframe{
     width: 80%;
-}
+} */
 .swipepic{
     grid-area: swipepic;
     border-radius: 3px;
     /* background-color: #999b84; */
     justify-self: center;
     height: 90vh;
-    /* border: 3px solid green; */
+    transition: transform 330ms ease-in-out;
+}
+.swipepic:hover{
+    transform: scale(1.1);
 }
 .swipetext{
     grid-area: swipetext;
@@ -514,7 +530,10 @@ iframe{
     min-width: 50%; */
     justify-self: center;
     height: 90vh;
-    /* border: 3px solid pink; */
+    transition: transform 330ms ease-in-out;
+}
+.flourshowerpic:hover{
+    transform: scale(1.1);
 }
 .flourshowertext{
     grid-area: flourshowertext;
@@ -532,7 +551,10 @@ iframe{
     min-width: 50%; */
     justify-self: center;
     height: 90vh;
-    /* border: 3px solid pink; */
+    transition: transform 330ms ease-in-out;
+}
+.imagegallerypic:hover{
+    transform: scale(1.1);
 }
 .imagegallerytext{
     grid-area: imagegallerytext;
@@ -550,7 +572,10 @@ iframe{
     min-width: 50%; */
     justify-self: center;
     height: 90vh;
-    /* border: 3px solid purple; */
+    transition: transform 330ms ease-in-out;
+}
+.eshoppic:hover{
+    transform: scale(1.1);
 }
 .eshoptext{
     grid-area: eshoptext;
@@ -568,7 +593,10 @@ iframe{
     min-width: 50%; */
     justify-self: center;
     height: 90vh;
-    /* border: 3px solid purple; */
+    transition: transform 330ms ease-in-out;
+}
+.uidesignpic:hover{
+    transform: scale(1.1);
 }
 .uidesigntext{
     grid-area: uidesigntext;
@@ -728,6 +756,7 @@ footer{
     }
     #projects{
         height: 1340vh !important;
+        grid-gap: .5%;
     }
     footer{
         padding: 5%;
@@ -905,7 +934,7 @@ footer{
         /* padding: 5% 5% 120% 5%; */
         /* padding: top right bottom left*/
         height: 1160vh;
-        grid-gap: 1%;
+        grid-gap: .7%;
         grid-template-columns: 1fr;
         grid-template-rows: .1fr .1fr 1fr .1fr 1fr .1fr 1fr .1fr 1fr .1fr 1fr .1fr 1fr .1fr 1fr .1fr 1fr;
         grid-template-areas:
