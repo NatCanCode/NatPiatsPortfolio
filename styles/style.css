@@ -4,7 +4,7 @@
     --black: #0A0402;
     --oldpink: #efd9d1;
     --kaki: #999b84;
-    --darkbackground: #261C2C;
+    --darkbackground: #322F3D;
     --darknav: #7B637E;
     --darkprojects: #3E2C41;
     --switch-color: var(--black);
@@ -147,7 +147,7 @@ nav{
     /* background-color: #f4eeed; */
     background-color: #efd9d1;
 }
-nav.dark{
+.dark nav{
     background-color: var(--darknav);
 }
 .nat{
@@ -248,7 +248,7 @@ nav a:hover{
     padding-top: 60%;
     padding-bottom: 2%;
 }
-.scroll.dark{
+.dark .scroll{
     color: var(--cream);
 }
 
@@ -268,7 +268,7 @@ nav a:hover{
     "abouttitle abouttitle"   
     "cartoonpic about";
 }
-#about.dark{
+.dark #about{
     background-color: var(--darknav);
     /* color: var(--cream); */
 }
@@ -324,8 +324,8 @@ nav a:hover{
     "skill1 skill2 skill3 skill4"
     ". skillsbutton skillsbutton .";
 }
-#softskills.dark{
-    background-color: var(--darknav);
+.dark #softskills{
+    background-color: var(--darkbackground);
     /* color: var(--cream); */
 }
 .skillstitle{
@@ -473,7 +473,7 @@ nav a:hover{
     "eshoppic uidesignpic"
     "eshoptext uidesigntext";
 }
-.projects.dark{
+.dark #projects{
     background-color: var(--darkprojects);
     /* color: var(--cream); */
 }
@@ -656,9 +656,23 @@ nav a:hover{
 .up:hover{
     color: #999b84 !important;
 }
-.up.dark{
+.dark .up{
     color: var(--cream);
 }
+
+/* COUNTDOWN */
+/* #countdown{
+    background: url("../images/sand-grainer-countdown.jpg"); */
+    /* always set a background-color if image is not available: */
+    /* background-color: #FFFFF4;
+    background-repeat: no-repeat;
+    width: 100vw; */
+    /* height: 100vh; */
+    /* border-radius: none !important;
+}
+/* .countdowntitle{
+
+} */
 
 /* FOOTER */
 footer a{
@@ -867,6 +881,9 @@ footer{
         -webkit-clip-path: circle(100px at 90% -20%);
         transition: all 1s ease-out;
         pointer-events: none;
+    }
+    .dark .nav-links{
+        background-color: var(--darknav);
     }
     .nav-links.open{
         clip-path: circle(1000px at 90% -20%);

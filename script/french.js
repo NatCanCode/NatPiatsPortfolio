@@ -1,3 +1,21 @@
+const hamburger = document.querySelector('.hamburger')
+const navLinks = document.querySelector('.nav-links')
+const links = document.querySelectorAll('.nav-links li')
+const header = document.querySelector("header")
+
+// toggle nav
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open')
+    links.forEach(link => {
+        link.classList.toggle('fade')
+    })
+    // burger animated cross
+    hamburger.classList.toggle('toggle')
+    // after a link clicked allows user to click on burger cross to reach the section
+    header.classList.toggle("open")
+})
+
+
 function salutations() {
     if (new Date().getHours() >= 2 && new Date().getHours() < 12) {
         salutations = "Hey, bonjour !<br>Je suis Nathalie.";
@@ -10,6 +28,14 @@ function salutations() {
     document.getElementById("salutations").innerHTML = salutations;
 }
 salutations();
+
+
+
+// dark/light switch
+const darkMode = document.getElementById('toggle')
+darkMode.addEventListener('change' , () => {
+    document.body.classList.toggle('dark')
+})
 
 
 let carousel = document.getElementById("carousel")

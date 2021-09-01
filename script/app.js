@@ -15,11 +15,13 @@ hamburger.addEventListener('click', () => {
     header.classList.toggle("open")
 })
 
+
 // dark/light switch
 const darkMode = document.getElementById('toggle')
 darkMode.addEventListener('change' , () => {
     document.body.classList.toggle('dark')
 })
+
 
 function greetings() {
     if (new Date().getHours() >= 2 && new Date().getHours() < 12) {
@@ -33,6 +35,7 @@ function greetings() {
     document.getElementById("greetings").innerHTML = greets
 }
 greetings()
+
 
 let carousel = document.getElementById("carousel")
 slides = carousel.getElementsByClassName("slider")
