@@ -33,20 +33,21 @@
                 </div>
             </div>
             <ul class="nav-links flex">
-                <a href="#about"><li>A propos</li></a>
-                <a href="#projects"><li>Projets</li></a>
-                <a href="#footer"><li>Contact</li></a>
-                <a href="index.html"><li>EN</li></a>
+                <li><a href="#about">A propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#countdown">Compte à rebours</a></li>
+                <li><a href="#footer">Contact</a></li>
+                <li><a href="index.html">EN</a></li>
             </ul>
         </nav>
 
         <section id="landing" class="flex">
             <h1>
                 <ul>
-                    <li>Developeuse web Front-End junior.</li>
-                    <li>Spécialisée en UX/UI design et communication digitale.</li>
-                    <li>Bilingue anglais.</li>
-                    <li>Basée à Paris.</li>
+                    <li>Developeuse web <span class="grow">Front-End</span> junior.</li>
+                    <li>Spécialisée en <span class="grow">UX/UI design</span> et communication digitale.</li>
+                    <li><span class="grow">Bilingue</span> anglais.</li>
+                    <li>Basée à <span class="grow">Paris</span>.</li>
                 </ul> 
             </h1>
             <div class="scroll-animation">
@@ -59,7 +60,7 @@
     <main>
         <!-- ABOUT -->
         <section id="about">
-            <h3 id="salutations" class="abouttitle flex">Hey, je suis Nathalie !</h3>
+            <h3 id="salutations" class="abouttitle grow-small flex">Hey, je suis Nathalie !</h3>
             <ul id="carousel" class="cartoonpic flex" >
                 <li class="slider" style="opacity:1;"><img src="../images/pinklips.jpg" alt="cartoon-pic-of-nat-with-blond-hair-and-pink-lips"></li>
                 <li class="slider"><img src="../images/redlips.jpg" alt="cartoon-pic-of-nat-with-blond-hair-and-red-lips">
@@ -156,11 +157,32 @@
             <h4 class="phototitle flex">Selected pictures</h4>
         </section>    -->
 
-        <!-- <section id="countdown">
-            <div class="countdown">
-                <h5 class="countdowntitle">Jours restants de formation Tech Manager chez Matrice</h5>
+        <section id="countdown">
+            <h3  class="countdowntext grow-small">Ma formation Tech <br>Manager à <a href="https://matrice.io/ecole/tech-front">Matrice</a><br>s'achève bientôt !</h3>
+            <div class="countdown flex"
+                data-countdown="2022-02-25T00:00:00+02:00"
+                data-countdown-option-leadingzero="true"
+                data-countdown-option-setcssproperties="true"
+                data-countdown-option-separatedigits="true"
+                data-countdown-option-nextdigits="true">
+                <div class="days">
+                    <span class="amount"></span>
+                    <span class="label"></span>
+                </div>
+                <div class="hours">
+                    <span class="amount"></span>
+                    <span class="label"></span>
+                </div>
+                <div class="minutes">
+                    <span class="amount"></span>
+                    <span class="label"></span>
+                </div>
+                <div class="seconds">
+                    <span class="amount"></span>
+                    <span class="label"></span>
+                </div>
             </div>
-        </section> -->
+        </section>
     </main>
 
     <!-- FOOTER -->
@@ -182,6 +204,7 @@
         </div>
     </footer>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="../script/french.js"></script>
     <script src="../script/app.js"></script>
