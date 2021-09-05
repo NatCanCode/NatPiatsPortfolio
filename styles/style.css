@@ -256,26 +256,26 @@ nav a:hover{
 //     display: inline-block;
 // }
 
-/* landing title animation */
-.container-landing {
-    overflow: hidden;
-}
-.container-landing h1 {
-      animation:
-            slideUp 1s .75s cubic-bezier(0.17,.88,.32,1.27) both,
-            fadeIn .25s .5s ease-in both;
-}
-@keyframes slideUp {
-    from {transform: translateY(25%);}
-    to {transform:translateY(0);}
-} 
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
+/* landing title animation - neat effect though see through when burger meny opened */
+// .container-landing {
+//     overflow: hidden;
+// }
+// .container-landing h1 {
+//       animation:
+//             slideUp 1s .75s cubic-bezier(0.17,.88,.32,1.27) both,
+//             fadeIn .25s .5s ease-in both;
+// }
+// @keyframes slideUp {
+//     from {transform: translateY(25%);}
+//     to {transform:translateY(0);}
+// } 
+// @keyframes fadeIn {
+//     from {opacity: 0;}
+//     to {opacity: 1;}
+// }
 
 /* lineUp animation - add infinite if needed */
-/* .container-landing h1 {
+.container-landing h1 {
     animation: 2s lineUp ease-in;
   }
 @keyframes lineUp {
@@ -294,7 +294,7 @@ nav a:hover{
         opacity: 1;
         transform: translateY(0%);
     }
-} */
+}
 
 /* flipping animation*/
 /* .flipX {
