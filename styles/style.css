@@ -257,22 +257,22 @@ nav a:hover{
 // }
 
 /* landing title animation */
-// .container-landing {
-//     overflow: hidden;
-// }
-// .container-landing h1 {
-//       animation:
-//             slideUp 1s .75s cubic-bezier(0.17,.88,.32,1.27) both,
-//             fadeIn .25s .5s ease-in both;
-// }
-// @keyframes slideUp {
-//     from {transform: translateY(25%);}
-//     to {transform:translateY(0);}
-// } 
-// @keyframes fadeIn {
-//     from {opacity: 0;}
-//     to {opacity: 1;}
-// }
+.container-landing {
+    overflow: hidden;
+}
+.container-landing h1 {
+      animation:
+            slideUp 1s .75s cubic-bezier(0.17,.88,.32,1.27) both,
+            fadeIn .25s .5s ease-in both;
+}
+@keyframes slideUp {
+    from {transform: translateY(25%);}
+    to {transform:translateY(0);}
+} 
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 
 /* lineUp animation - add infinite if needed */
 /* .container-landing h1 {
@@ -362,6 +362,17 @@ nav a:hover{
     grid-area: abouttitle;
     text-transform: uppercase;
     align-items: center;
+}
+.work{
+    letter-spacing: .09em;
+}
+.work .text-wrapper{
+    overflow: hidden;
+    display: inline-block;
+}
+.work .letter{
+    display: inline-block;
+    transform-origin: 0 0;
 }
 .grow-small{
     flex-grow: 1;
